@@ -22,152 +22,170 @@ THEN I am taken to the corresponding section of the README
 
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// TODO: Create an array of questions for user input.
+// This array will be fed to Inquirer's .prompt method
 const questions = [
-    {
-        type: 'input',
-        name: 'name',
-        message: 'What is your full name (required)?',
-        validate: nameInput => {
-            if (nameInput) {
-              return true;
-            } else {
-              console.log('Please enter your full name!');
-              return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'What is your GitHub username (required)?',
-        validate: usernameInput => {
-            if (usernameInput) {
-              return true;
-            } else {
-              console.log('Please enter your GitHub username!');
-              return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'email',
-        message: 'What is your email address (required)?',
-        validate: emailInput => {
-            if (emailInput) {
-              return true;
-            } else {
-              console.log('Please enter your email!');
-              return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'projectTitle',
-        message: 'What is the name of your project to add it to the README.md file (required)?',
-        validate: projectTitleInput => {
-            if (projectTitleInput) {
-              return true;
-            } else {
-              console.log('Please enter your project\'s title!');
-              return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'projectDescription',
-        message: 'Provide a good description of your project (required):',
-        validate: descriptionInput => {
-          if (descriptionInput) {
+  //name
+  {
+      type: 'input',
+      name: 'name',
+      message: 'What is your full name (required)?',
+      validate: nameInput => {
+          if (nameInput) {
             return true;
           } else {
-            console.log('Please enter a description for your project!');
+            console.log('Please enter your full name!');
             return false;
           }
-        }
-    },
-    {
-        type: 'input',
-        name: 'projectInstallation',
-        message: 'Provide installation instructions for your project (required):',
-        validate: installSteps => {
-            if (installSteps) {
+      }
+  },
+  //github
+  {
+      type: 'input',
+      name: 'github',
+      message: 'What is your GitHub username (required)?',
+      validate: usernameInput => {
+          if (usernameInput) {
             return true;
-            } else {
-            console.log('Please give instructions for installing!');
+          } else {
+            console.log('Please enter your GitHub username!');
             return false;
-            }
-        }
-    },
-    {
-    type: 'input',
-    name: 'projectUsage',
-    message: 'Provide usage instructions for your project (required):',
-    validate: usageInfo => {
-        if (usageInfo) {
-        return true;
+          }
+      }
+  },
+  //email
+  {
+      type: 'input',
+      name: 'email',
+      message: 'What is your email address (required)?',
+      validate: emailInput => {
+          if (emailInput) {
+            return true;
+          } else {
+            console.log('Please enter your email!');
+            return false;
+          }
+      }
+  },
+  //projecTitle
+  {
+      type: 'input',
+      name: 'projectTitle',
+      message: 'What is the name of your project to add it to the README.md file (required)?',
+      validate: projectTitleInput => {
+          if (projectTitleInput) {
+            return true;
+          } else {
+            console.log('Please enter your project\'s title!');
+            return false;
+          }
+      }
+  },
+  //projectDescription
+  {
+      type: 'input',
+      name: 'projectDescription',
+      message: 'Provide a good description of your project, i.e. the what, why, and how (required):',
+      validate: descriptionInput => {
+        if (descriptionInput) {
+          return true;
         } else {
-        console.log('Please provide usage instructions!');
-        return false;
+          console.log('Please enter a description for your project!');
+          return false;
         }
-    }
-    },
-    {
-        type: 'list',
-        name: 'projectLicense',
-        message: 'What license is this project made under? Select one (default is The Unlicense):',
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-        default: 'The Unlicense'
-    },
-    {
-    type: 'input',
-    name: 'projectContributions',
-    message: 'Provide guidelines for how others may contribute to this project (required):',
-    validate: contributeGuidelines => {
-        if (contributeGuidelines) {
-        return true;
-        } else {
-        console.log('Please provide usage instructions!');
-        return false;
-        }
-    }
-    },
-    {
-    type: 'input',
-    name: 'projectTests',
-    message: 'Provide test descriptions for this project (required):',
-    validate: contributeGuidelines => {
-        if (contributeGuidelines) {
-        return true;
-        } else {
-        console.log('Please provide test description!');
-        return false;
-        }
-    }
-    }
+      }
+  },
+  //projectInstallation
+  {
+      type: 'input',
+      name: 'projectInstallation',
+      message: 'Provide installation instructions for your project (required):',
+      validate: installSteps => {
+          if (installSteps) {
+          return true;
+          } else {
+          console.log('Please give instructions for installing!');
+          return false;
+          }
+      }
+  },
+  //projectUsage
+  {
+  type: 'input',
+  name: 'projectUsage',
+  message: 'Provide usage instructions for your project (required):',
+  validate: usageInfo => {
+      if (usageInfo) {
+      return true;
+      } else {
+      console.log('Please provide usage instructions!');
+      return false;
+      }
+  }
+  },
+  //projectLicense
+  {
+      type: 'list',
+      name: 'projectLicense',
+      message: 'What license is this project made under? Select one (default is The Unlicense):',
+      choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+      default: 'The Unlicense'
+  },
+  //projectContributions
+  {
+  type: 'input',
+  name: 'projectContributions',
+  message: 'Provide guidelines for how others may contribute to this project (required):',
+  validate: contributeGuidelines => {
+      if (contributeGuidelines) {
+      return true;
+      } else {
+      console.log('Please provide usage instructions!');
+      return false;
+      }
+  }
+  },
+  //projectTests
+  {
+  type: 'input',
+  name: 'projectTests',
+  message: 'Provide test descriptions for this project (required):',
+  validate: contributeGuidelines => {
+      if (contributeGuidelines) {
+      return true;
+      } else {
+      console.log('Please provide test description!');
+      return false;
+      }
+  }
+  }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-
+/*     fs.writeFile('README.md', generateMarkdown(data), err => {
+      if(err) throw err;
+      console.log('Writing the README.md file is complete. Have a look at it!');
+    }) */
 }
 
 // TODO: Create a function to initialize app
+// The init function prompts the user a series of questions stored in the array 'questions'
 function init() {
     return inquirer.prompt(questions);
 }
 
 // Function call to initialize app
 init()
-.then(answers => {
-    console.log('Answers are: ', answers);
-})
-.then(readmeData => {
-    write
+// The responses to the questions are stored in the answer object which is returned as a Promise.
+// The inquirer.prompt method returns a Promise which we handle by way of the .then method
+.then(userAnswers => {
+    console.log('Answers are: ', userAnswers);
+    // use the generateMarkdown function to take the user responses and create the README.md sections etc
+    generateMarkdown(userAnswers);
 })
 .catch(err => {
     console.log('The error is: ', err);
