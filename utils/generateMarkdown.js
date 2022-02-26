@@ -1,5 +1,4 @@
 const moment = require('moment');
-// console.log(moment);
 let thisYear = moment().format('YYYY');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -115,7 +114,9 @@ function generateMarkdown(data) {
   ${data.projectUsage}
 
   ## License
-  ${data.projectLicense}
+  ${renderLicenseSection(data.projectLicense)}
+
+  As shown ${renderLicenseLink(data.projectLicense)}.
 
   ## Contribute
   ${data.projectContribute}
