@@ -1,4 +1,6 @@
 const moment = require('moment');
+const fs = require('fs');
+
 let thisYear = moment().format('YYYY');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -6,12 +8,12 @@ let thisYear = moment().format('YYYY');
 function renderLicenseBadge(license) {
   // opting to use switch statement for determining which license user selected and returning the license badge
   switch (license) {
-    case 'GNU AGPLv3':
-      return '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)';
     case 'GNU GPLv3':
       return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
     case 'GNU LGPLv3':
       return '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)';
+    case 'GNU AGPLv3':
+      return '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)';
     case 'Mozilla Public License 2.0':
       return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
     case 'Apache License 2.0':
@@ -31,12 +33,12 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch (license) {
-    case 'GNU AGPLv3':
-      return `<a href="https://www.gnu.org/licenses/agpl-3.0" target="_blank">here</a>`;
     case 'GNU GPLv3':
       return `<a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>`;
     case 'GNU LGPLv3':
       return `<a href="https://www.gnu.org/licenses/lgpl-3.0" target="_blank">here</a>`;
+    case 'GNU AGPLv3':
+      return `<a href="https://www.gnu.org/licenses/agpl-3.0" target="_blank">here</a>`;
     case 'Mozilla Public License 2.0':
       return `<a href="https://opensource.org/licenses/MPL-2.0" target="_blank">here</a>`;
     case 'Apache License 2.0':
@@ -56,12 +58,12 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   switch (license) {
-    case 'GNU AGPLv3':
-      return `<a href="https://www.gnu.org/licenses/agpl-3.0" target="_blank">here</a>`;
     case 'GNU GPLv3':
-      return `<a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank"></a>`;
+      return `<a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>`;
     case 'GNU LGPLv3':
       return `<a href="https://www.gnu.org/licenses/lgpl-3.0" target="_blank">here</a>`;
+    case 'GNU AGPLv3':
+      return `<a href="https://www.gnu.org/licenses/agpl-3.0" target="_blank">here</a>`;
     case 'Mozilla Public License 2.0':
       return `<a href="https://opensource.org/licenses/MPL-2.0" target="_blank">here</a>`;
     case 'Apache License 2.0':
@@ -79,10 +81,9 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `<p align="center">${renderLicenseBadge(data.projectLicense)}</p>
-
+  return `<div align="center">${renderLicenseBadge(data.projectLicense)}
   # ${data.projectTitle}
-  
+  </div>
   ## Project Description
   ${data.projectDescription}
   
@@ -112,8 +113,8 @@ function generateMarkdown(data) {
   ${data.projectTests}
 
   ## Questions?
-  I enjoy hearing back about my work. You can reach me at ${data.email}
-  Alternatively, contact me on my GitHub page <a href="https://github.com/${data.github}">here</a>
+  I enjoy hearing back about my work. You can reach me at ${data.email}.
+  Alternatively, contact me on my GitHub page <a href="https://github.com/${data.github}">here</a>.
   `;
 }
 

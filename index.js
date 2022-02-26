@@ -132,11 +132,11 @@ const questions = [
       type: 'list',
       name: 'projectLicense',
       message: 'What license is this project made under? Select one (default is none):',
-      choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense', 'none'],
+      choices: ['GNU GPLv3', 'GNU LGPLv3', 'GNU AGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense', 'none'],
       default: 'none'
   },
   //projectContributions
-  {
+/*   {
   type: 'input',
   name: 'projectContribute',
   message: 'Provide guidelines for how others may contribute to this project (required):',
@@ -148,9 +148,9 @@ const questions = [
       return false;
       }
   }
-  },
+  }, */
   //projectTests
-  {
+/*   {
   type: 'input',
   name: 'projectTests',
   message: 'Provide test descriptions for this project (required):',
@@ -162,7 +162,7 @@ const questions = [
       return false;
       }
   }
-  }
+  } */
 ];
 
 // TODO: Create a function to write README file
@@ -184,7 +184,7 @@ init()
 // The responses to the questions are stored in the answer object which is returned as a Promise.
 // The inquirer.prompt method returns a Promise which we handle by way of the .then method
 .then(userAnswers => {
-    console.log('Answers are: ', userAnswers);
+    // console.log('Answers are: ', userAnswers);
     // use the generateMarkdown function to take the user responses and create the README.md sections etc
     return generateMarkdown(userAnswers);
 })
