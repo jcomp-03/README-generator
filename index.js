@@ -85,7 +85,7 @@ const questions = [
       }
   },
   //projectDescription
-  {
+/*   {
       type: 'input',
       name: 'projectDescription',
       message: 'Provide a good description of your project, i.e. the what, why, and how (required):',
@@ -131,8 +131,8 @@ const questions = [
       type: 'list',
       name: 'projectLicense',
       message: 'What license is this project made under? Select one (default is The Unlicense):',
-      choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
-      default: 'The Unlicense'
+      choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense', none],
+      default: 'none'
   },
   //projectContributions
   {
@@ -161,7 +161,7 @@ const questions = [
       return false;
       }
   }
-  }
+  } */
 ];
 
 // TODO: Create a function to write README file
