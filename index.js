@@ -138,7 +138,7 @@ const questions = [
   //projectContributions
   {
   type: 'input',
-  name: 'projectContributions',
+  name: 'projectContribute',
   message: 'Provide guidelines for how others may contribute to this project (required):',
   validate: contributeGuidelines => {
       if (contributeGuidelines) {
