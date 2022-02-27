@@ -10,7 +10,7 @@
   * [Tests](#tests)
   * [Questions?](#questions)
   ## Installation
-  Once the repository is cloned, from the root directory of where they installed the application the user is to run the command 'npm install' to install required dependencies. After dependencies are loaded, all the user must do to run the application is type 'node index.js' in the command line and answer the prompts as they appear. 
+  Once the repository is cloned, from the root directory of where they installed the application the user is to run the command 'npm install' to install required dependencies. After dependencies are loaded, all the user must do to run the application is type 'node index.js' in the command line and answer the prompts as they appear.
   ## Usage
   See the GIF below for how to use the app.<br>
   ![Brief GIF showing how to run application.](./app-gif.gif)
@@ -697,7 +697,7 @@ Public License instead of this License.  But first, please read
   Legalese borrowed from <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>.
 
   ## Contribute
-  Please email me for any contribution ideas!
+  Please contact me at my email or GitHub user for ways to contribute to this project!
 
   ## Tests
   None at this time.
