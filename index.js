@@ -145,7 +145,7 @@ const questions = [
         return false;
       }
     }
-  }
+  },
   //projectLicense
   {
       type: 'list',

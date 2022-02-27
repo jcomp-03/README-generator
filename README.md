@@ -1,7 +1,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  # Test-Presentation-README-Generator
+  # README Generator
   ## Project Description
-  A Node.js application which uses Inquirer.prompt method to receive user answers and from the answers automatically ggenerate a decent-looking README.md file. Which saves the user time from having to author Markdown themselves!
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -10,9 +10,9 @@
   * [Tests](#tests)
   * [Questions?](#questions)
   ## Installation
-  Run npm install after downloading the repo. Then in the terminal type 'node index.js', like what was done for this video!
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   ## Usage
-  Fairly straightforward. Answer these prompts as this video is doing to populate the corresponding section in the README.md file with text.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
   ## License
   <p align="center">Copyright 2022</p>
     <p align="center">=======================================</p><br>
@@ -696,10 +696,10 @@ Public License instead of this License.  But first, please read
   Legalese borrowed from <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>.
 
   ## Contribute
-  If you see areas for improvement, please let me know.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
   ## Tests
-  Nothing at this time.
+  None
 
   ## Questions?
   I enjoy hearing back about my work. You can reach me at jcomp_03@yahoo.com.
