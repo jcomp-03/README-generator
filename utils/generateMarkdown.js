@@ -59,21 +59,12 @@ function renderLicenseSection(license) {
   switch (license) {
     case 'GNU GPLv3': {
         let licenseText = fs.readFileSync('./utils/GNU GPLv3.txt', 'utf8');
-        return `<p align="center">Copyright ${thisYear} James Compagnoni
-          ======================
-          </p><br>
-          ${licenseText}`;
-        fs.readFile('./utils/GNU GPLv3.txt', 'utf8', (err, data) => {
-          if (err) {
-            console.error(err);
-            return;
-          }
-          // console.log(data);
-          return data;
-        }); // end of fs.readFile
-        
-        // `<p align="center">Copyright ${thisYear} James Compagnoni</p>
-        //   ======================`;
+        return `<p align="center">Copyright ${thisYear} ${renderLicenseBadge(license)}</p>
+          <p align="center">================================================</p><br>
+          <details>
+          <summary>Click here for the legal stuff, if that's <em>your thing</em></summary>
+          ${licenseText}
+          </details>`;  
       } // end of case block statement
     case 'GNU LGPLv3':
       return `Gone too far` //`<a href="https://www.gnu.org/licenses/lgpl-3.0" target="_blank">here</a>`;
