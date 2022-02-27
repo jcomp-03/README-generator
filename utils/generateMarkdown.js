@@ -58,20 +58,25 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   switch (license) {
     case 'GNU GPLv3': {
-      try {
-        // const data = fs.readFileSync('./GNU GPLv3.txt', 'utf8');
-        // console.log(data);
-        return `<p align="center">Copyright ${thisYear} James Compagnoni</p>
-        ======================
-        `; // ${data}`;
-      } catch (err) {
-        console.error(err);
-        return;
-      }
-      // return `<a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>`;
-    }
+        let licenseText = fs.readFileSync('./utils/GNU GPLv3.txt', 'utf8');
+        return `<p align="center">Copyright ${thisYear} James Compagnoni
+          ======================
+          </p><br>
+          ${licenseText}`;
+        fs.readFile('./utils/GNU GPLv3.txt', 'utf8', (err, data) => {
+          if (err) {
+            console.error(err);
+            return;
+          }
+          // console.log(data);
+          return data;
+        }); // end of fs.readFile
+        
+        // `<p align="center">Copyright ${thisYear} James Compagnoni</p>
+        //   ======================`;
+      } // end of case block statement
     case 'GNU LGPLv3':
-      return `<a href="https://www.gnu.org/licenses/lgpl-3.0" target="_blank">here</a>`;
+      return `Gone too far` //`<a href="https://www.gnu.org/licenses/lgpl-3.0" target="_blank">here</a>`;
     case 'GNU AGPLv3':
       return `<a href="https://www.gnu.org/licenses/agpl-3.0" target="_blank">here</a>`;
     case 'Mozilla Public License 2.0':
