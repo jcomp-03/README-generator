@@ -116,7 +116,7 @@ const questions = [
   {
   type: 'input',
   name: 'projectUsage',
-  message: 'Provide usage instructions for your project (required):',
+  message: 'Provide usage instructions for your project (required).  In the next prompt, you will be asked whether to include a video/GIF for insertion into your README.md file:',
   validate: usageInfo => {
       if (usageInfo) {
       return true;
@@ -126,20 +126,20 @@ const questions = [
       }
   }
   },
-  //confirmIncludeVideo
+  //confirmIncludeGif
   {
     type: 'confirm',
-    name: 'confirmIncludeVideo',
-    message: 'Would you like to provide a relative path for inserting a video or GIF into the README.md file that will be created?',
+    name: 'confirmIncludeGif',
+    message: 'Would you like to provide a relative path for inserting a short GIF into the README.md file you\'re creating? Note: Max upload size for GIF is 10MB.',
     default: false
   },
-  //videoPath
+  //gifPath
   {
     type: 'input',
-    name: 'videoPath',
-    message: 'Provide the relative path, as viewed from the location of the file index.js',
-    when: ({ confirmIncludeVideo }) => {
-      if (confirmIncludeVideo) {
+    name: 'gifPath',
+    message: 'Provide the relative path, as viewed from the location of index.js',
+    when: ({ confirmIncludeGif }) => {
+      if (confirmIncludeGif) {
         return true;
       } else {
         return false;

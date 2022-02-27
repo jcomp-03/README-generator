@@ -65,6 +65,13 @@ function renderLicenseSection(license) {
     </details>`;
 }
 
+function insertGif (relativePath) {
+  if (!relativePath) {
+    return `![Brief GIF showing how to run application.](./${relativePath})`;
+  } else return 'No video found';
+
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `${renderLicenseBadge(data.projectLicense)}
@@ -81,7 +88,8 @@ function generateMarkdown(data) {
   ## Installation
   ${data.projectInstallation}
   ## Usage
-  ${data.projectUsage}
+  ${data.projectUsage}<br>
+  ${insertGif(data.gifPath)}
   ## License
   ${renderLicenseSection(data.projectLicense)}
   Legalese borrowed from ${renderLicenseLink(data.projectLicense)}.
