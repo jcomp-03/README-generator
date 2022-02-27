@@ -126,6 +126,26 @@ const questions = [
       }
   }
   },
+  //confirmIncludeVideo
+  {
+    type: 'confirm',
+    name: 'confirmIncludeVideo',
+    message: 'Would you like to provide a relative path for inserting a video or GIF into the README.md file that will be created?',
+    default: false
+  },
+  //videoPath
+  {
+    type: 'input',
+    name: 'videoPath',
+    message: 'Provide the relative path, as viewed from the location of the file index.js',
+    when: ({ confirmIncludeVideo }) => {
+      if (confirmIncludeVideo) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
   //projectLicense
   {
       type: 'list',
@@ -135,7 +155,7 @@ const questions = [
       default: 'none'
   },
   //projectContributions
-/*   {
+  {
   type: 'input',
   name: 'projectContribute',
   message: 'Provide guidelines for how others may contribute to this project (required):',
@@ -147,9 +167,9 @@ const questions = [
       return false;
       }
   }
-  }, */
+  },
   //projectTests
-/*   {
+  {
   type: 'input',
   name: 'projectTests',
   message: 'Provide test descriptions for this project (required):',
@@ -161,7 +181,7 @@ const questions = [
       return false;
       }
   }
-  } */
+  }
 ];
 
 // TODO: Create a function to write README file

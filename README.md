@@ -1,7 +1,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  # J
+  # Test-Presentation-README-Generator
   ## Project Description
-  J
+  A Node.js application which uses Inquirer.prompt method to receive user answers and from the answers automatically ggenerate a decent-looking README.md file. Which saves the user time from having to author Markdown themselves!
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -10,15 +10,15 @@
   * [Tests](#tests)
   * [Questions?](#questions)
   ## Installation
-  J
+  Run npm install after downloading the repo. Then in the terminal type 'node index.js', like what was done for this video!
   ## Usage
-  J
+  Fairly straightforward. Answer these prompts as this video is doing to populate the corresponding section in the README.md file with text.
   ## License
   <p align="center">Copyright 2022</p>
-          <p align="center">=======================================</p><br>
-          <details>
-          <summary>Click for the legal stuff, if that's <em><strong>your thing</strong></em></summary>
-                              GNU GENERAL PUBLIC LICENSE
+    <p align="center">=======================================</p><br>
+    <details>
+    <summary>Click for the legal stuff, if that's <em><strong>your thing</strong></em></summary>
+                        GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
@@ -692,16 +692,16 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
-          </details>
+    </details>
   Legalese borrowed from <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>.
 
   ## Contribute
-  undefined
+  If you see areas for improvement, please let me know.
 
   ## Tests
-  undefined
+  Nothing at this time.
 
   ## Questions?
-  I enjoy hearing back about my work. You can reach me at J.
-  Alternatively, contact me on my GitHub page <a href="https://github.com/J">here</a>.
+  I enjoy hearing back about my work. You can reach me at jcomp_03@yahoo.com.
+  Alternatively, contact me on my GitHub page <a href="https://github.com/jcomp-03">here</a>.
   

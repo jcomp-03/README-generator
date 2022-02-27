@@ -56,33 +56,13 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  switch (license) {
-    case 'GNU GPLv3': {
-        let licenseText = fs.readFileSync('./utils/GNU GPLv3.txt', 'utf8');
-        return `<p align="center">Copyright ${thisYear}</p>
-          <p align="center">=======================================</p><br>
-          <details>
-          <summary>Click for the legal stuff, if that's <em><strong>your thing</strong></em></summary>
-          ${licenseText}
-          </details>`;  
-      } // end of case block statement
-    case 'GNU LGPLv3':
-      return `Gone too far` //`<a href="https://www.gnu.org/licenses/lgpl-3.0" target="_blank">here</a>`;
-    case 'GNU AGPLv3':
-      return `<a href="https://www.gnu.org/licenses/agpl-3.0" target="_blank">here</a>`;
-    case 'Mozilla Public License 2.0':
-      return `<a href="https://opensource.org/licenses/MPL-2.0" target="_blank">here</a>`;
-    case 'Apache License 2.0':
-      return `<a href="https://opensource.org/licenses/Apache-2.0" target="_blank">here</a>`;
-    case 'MIT License':
-      return `<p align="center">Copyright ${thisYear} James Compagnoni</p>`;
-    case 'Boost Software License 1.0':
-      return `<a href="https://www.boost.org/LICENSE_1_0.txt" target="_blank">here</a>`;
-    case 'The Unlicense':
-      return `<a href="http://unlicense.org/" target="_blank">here</a>`;
-    default:
-      return '';
-  }
+  let licenseText = fs.readFileSync(`./utils/${license}.txt`, 'utf8');
+  return `<p align="center">Copyright ${thisYear}</p>
+    <p align="center">=======================================</p><br>
+    <details>
+    <summary>Click for the legal stuff, if that's <em><strong>your thing</strong></em></summary>
+    ${licenseText}
+    </details>`;
 }
 
 // TODO: Create a function to generate markdown for README
