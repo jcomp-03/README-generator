@@ -1,7 +1,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  # J
+  # wk9-readme-generator
   ## Project Description
-  J
+  This Node.js app facilitates the creation and population of a GitHub repository's README.md file. It uses the third-party Node.js module called Inquirer which takes in user information and from that information builds out the README.md file. The app uses Inquirer's .prompt() method to stage a series of questions the user has to answer. Once the user answers all the prompts, the data object (called userAnswers in the JavaScript code) that is returned is then passed to a function whose responsibility is to build out the README file content. This function is aptly called generateMarkdown and is imported into the main file index.js. Finally, fs.writeFile is used to write the file (i.e. README.md) to the user's system, using the return from generateMarkdown as its object.
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -10,10 +10,10 @@
   * [Tests](#tests)
   * [Questions?](#questions)
   ## Installation
-  J
+  Once the repository is cloned, from the root directory of where they installed the application the user is to run the command 'npm install' to install required dependencies. After dependencies are loaded, all the user must do to run the application is type 'node index.js' in the command line and answer the prompts as they appear. 
   ## Usage
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
-  ![Brief GIF showing how to run application.](./GIF Run README.md generator from Node.gif)
+  See the GIF below for how to use the app.<br>
+  ![Brief GIF showing how to run application.](./app-gif.gif)
   ## License
   <p align="center">Copyright 2022</p>
     <p align="center">=======================================</p><br>
@@ -697,12 +697,12 @@ Public License instead of this License.  But first, please read
   Legalese borrowed from <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>.
 
   ## Contribute
-  J
+  Please email me for any contribution ideas!
 
   ## Tests
-  J
+  None at this time.
 
   ## Questions?
-  I enjoy hearing back about my work. You can reach me at J.
-  Alternatively, contact me on my GitHub page <a href="https://github.com/J">here</a>.
+  I enjoy hearing back about my work. You can reach me at jcomp_03@yahoo.com.
+  Alternatively, contact me on my GitHub page <a href="https://github.com/jcomp-03">here</a>.
   

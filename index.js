@@ -116,7 +116,7 @@ const questions = [
   {
   type: 'input',
   name: 'projectUsage',
-  message: 'Provide usage instructions for your project (required).  In the next prompt, you will be asked whether to include a video/GIF for insertion into your README.md file:',
+  message: 'Provide usage instructions for your project (required).  In the next prompt, you will be asked whether you wish to include a GIF into your README.md file\'s Usage section:',
   validate: usageInfo => {
       if (usageInfo) {
       return true;
@@ -130,14 +130,15 @@ const questions = [
   {
     type: 'confirm',
     name: 'confirmIncludeGif',
-    message: 'Would you like to provide a relative path for inserting a short GIF into the README.md file you\'re creating? Note: Max upload size for GIF is 10MB.',
+    message: 'Would you like to provide a relative path for inserting a short GIF showcasing usage into the README.md file you\'re creating? Note: Max upload size for GIF is 10MB.',
     default: false
   },
   //gifPath
   {
     type: 'input',
     name: 'gifPath',
-    message: 'Provide the relative path, as viewed from the location of index.js',
+    message: `Provide the relative path, as viewed from the location of index.js. For example, if index.js in in root, and your app-gif-file is located in root as well, enter the following: app-gif-file.gif
+Note: Do not use spaces in your file name.`,
     when: ({ confirmIncludeGif }) => {
       if (confirmIncludeGif) {
         return true;
@@ -208,7 +209,6 @@ init()
     return generateMarkdown(userAnswers);
 })
 .then(markdownContent => {
-  console.log(markdownContent);
   writeToFile('./README.md', markdownContent);
 })
 .catch(err => {
