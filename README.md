@@ -1,7 +1,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  # wk9-readme-generator
+  # J
   ## Project Description
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  J
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -10,14 +10,14 @@
   * [Tests](#tests)
   * [Questions?](#questions)
   ## Installation
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  J
   ## Usage
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  J
   ## License
-  <p align="center">Copyright 2022 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)</p>
-          <p align="center">================================================</p><br>
+  <p align="center">Copyright 2022</p>
+          <p align="center">=======================================</p><br>
           <details>
-          <summary>Click here for the legal stuff, if that's <em>your thing</em></summary>
+          <summary>Click for the legal stuff, if that's <em><strong>your thing</strong></em></summary>
                               GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
@@ -702,6 +702,6 @@ Public License instead of this License.  But first, please read
   undefined
 
   ## Questions?
-  I enjoy hearing back about my work. You can reach me at jcomp_03@yahoo.com.
-  Alternatively, contact me on my GitHub page <a href="https://github.com/jcomp-03">here</a>.
+  I enjoy hearing back about my work. You can reach me at J.
+  Alternatively, contact me on my GitHub page <a href="https://github.com/J">here</a>.
   
