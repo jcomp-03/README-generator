@@ -1,9 +1,7 @@
-<div align="center">[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  # wk9-readme-generator
-  </div>
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+  # j
   ## Project Description
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-  
+  j
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -11,16 +9,14 @@
   * [Contribute](#contributions)
   * [Tests](#tests)
   * [Questions?](#questions)
-  
   ## Installation
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-
+  j
   ## Usage
-  aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-
+  j
   ## License
-  <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>
-
+  <p align="center">Copyright 2022 James Compagnoni</p>
+        ======================
+        
   Legalese borrowed from <a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>.
 
   ## Contribute
@@ -30,6 +26,6 @@
   undefined
 
   ## Questions?
-  I enjoy hearing back about my work. You can reach me at jcomp_03@yahoo.com.
-  Alternatively, contact me on my GitHub page <a href="https://github.com/jcomp-03">here</a>.
+  I enjoy hearing back about my work. You can reach me at j.
+  Alternatively, contact me on my GitHub page <a href="https://github.com/j">here</a>.
   

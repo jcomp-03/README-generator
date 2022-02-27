@@ -1,6 +1,5 @@
 const moment = require('moment');
 const fs = require('fs');
-
 let thisYear = moment().format('YYYY');
 
 // TODO: Create a function that returns a license badge based on which license is passed in
@@ -58,8 +57,19 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   switch (license) {
-    case 'GNU GPLv3':
-      return `<a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>`;
+    case 'GNU GPLv3': {
+      try {
+        // const data = fs.readFileSync('./GNU GPLv3.txt', 'utf8');
+        // console.log(data);
+        return `<p align="center">Copyright ${thisYear} James Compagnoni</p>
+        ======================
+        `; // ${data}`;
+      } catch (err) {
+        console.error(err);
+        return;
+      }
+      // return `<a href="https://www.gnu.org/licenses/gpl-3.0" target="_blank">here</a>`;
+    }
     case 'GNU LGPLv3':
       return `<a href="https://www.gnu.org/licenses/lgpl-3.0" target="_blank">here</a>`;
     case 'GNU AGPLv3':
@@ -81,12 +91,10 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `<div align="center">${renderLicenseBadge(data.projectLicense)}
+  return `${renderLicenseBadge(data.projectLicense)}
   # ${data.projectTitle}
-  </div>
   ## Project Description
   ${data.projectDescription}
-  
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -94,16 +102,12 @@ function generateMarkdown(data) {
   * [Contribute](#contributions)
   * [Tests](#tests)
   * [Questions?](#questions)
-  
   ## Installation
   ${data.projectInstallation}
-
   ## Usage
   ${data.projectUsage}
-
   ## License
   ${renderLicenseSection(data.projectLicense)}
-
   Legalese borrowed from ${renderLicenseLink(data.projectLicense)}.
 
   ## Contribute
