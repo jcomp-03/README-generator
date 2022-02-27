@@ -59,10 +59,10 @@ function renderLicenseSection(license) {
   switch (license) {
     case 'GNU GPLv3': {
         let licenseText = fs.readFileSync('./utils/GNU GPLv3.txt', 'utf8');
-        return `<p align="center">Copyright ${thisYear} ${renderLicenseBadge(license)}</p>
-          <p align="center">================================================</p><br>
+        return `<p align="center">Copyright ${thisYear}</p>
+          <p align="center">=======================================</p><br>
           <details>
-          <summary>Click here for the legal stuff, if that's <em>your thing</em></summary>
+          <summary>Click for the legal stuff, if that's <em><strong>your thing</strong></em></summary>
           ${licenseText}
           </details>`;  
       } // end of case block statement
