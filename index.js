@@ -1,3 +1,8 @@
+////////////////////////////////////////////////////////////////////////////////////////
+//////// Always check to see where the README.md file is written to on line 192! ///////
+//////// Change the path to the absolute location where you need the file placed ///////
+////////////////////////////////////////////////////////////////////////////////////////
+
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
@@ -187,7 +192,7 @@ init()
     return generateMarkdown(userAnswers);
 })
 .then(markdownContent => {
-  writeToFile('./README.md', markdownContent);
+  writeToFile(`B:/OneDrive - Edison Energy Inc/Courses/UM Bootcamp/0. Challenges/wk10-team-profile-generator/README2.md`, markdownContent);
 })
 .catch(err => {
     console.log('The error is: ', err);

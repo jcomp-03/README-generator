@@ -56,7 +56,7 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let licenseText = fs.readFileSync(`./utils/${license}.txt`, 'utf8');
+  let licenseText = fs.readFileSync(`./utils/legal-text/${license}.txt`, 'utf8');
   return `<p align="center">Copyright ${thisYear}</p>
     <p align="center">=======================================</p><br>
     <details>
