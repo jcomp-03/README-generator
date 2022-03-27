@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////////////
-//////// Always check to see where the README.md file is written to on line 192! ///////
+//////// Always check to see where the README.md file is written to on line 209! ///////
 //////// Change the path to the absolute location where you need the file placed ///////
 ////////////////////////////////////////////////////////////////////////////////////////
 
@@ -15,7 +15,7 @@ const questions = [
   {
     type: 'input',
     name: 'name',
-    message: 'What is your full name (required)?',
+    message: '(required) What is your full name?',
     validate: nameInput => {
         if (nameInput) {
           return true;
@@ -29,7 +29,7 @@ const questions = [
   {
     type: 'input',
     name: 'github',
-    message: 'What is your GitHub username (required)?',
+    message: '(required) What is your GitHub username?',
     validate: usernameInput => {
         if (usernameInput) {
           return true;
@@ -43,7 +43,7 @@ const questions = [
   {
     type: 'input',
     name: 'email',
-    message: 'What is your email address (required)?',
+    message: '(required) What is your email address?',
     validate: emailInput => {
         if (emailInput) {
           return true;
@@ -53,11 +53,11 @@ const questions = [
         }
     }
   },
-  //projecTitle
+  //projectTitle
   {
     type: 'input',
     name: 'projectTitle',
-    message: 'What is the name of your project to add it to the README.md file (required)?',
+    message: '(required) Provide the title of the app to add it to the README.md file:',
     validate: projectTitleInput => {
         if (projectTitleInput) {
           return true;
@@ -71,7 +71,7 @@ const questions = [
   {
     type: 'input',
     name: 'projectDescription',
-    message: 'Provide a good description of your project, i.e. the what, why, and how (required):',
+    message: '(required) Provide a description of your app, i.e. the what, why, and how:',
     validate: descriptionInput => {
         if (descriptionInput) {
           return true;
@@ -81,25 +81,39 @@ const questions = [
         }
     }
   },
-  //projectInstallation
+  //confirmRunNormally
+  {
+    type: 'confirm',
+    name: 'confirmRunNormally',
+    message: '(required) From the terminal, does the app run with the typical "npm start" command?',
+    default: true
+  },
+  //runCommand
   {
     type: 'input',
-    name: 'projectInstallation',
-    message: 'Provide installation instructions for your project (required):',
-    validate: installSteps => {
-        if (installSteps) {
-          return true;
-        } else {
-          console.log('Please give instructions for installing!');
-          return false;
-        }
-    }
+    name: 'runCommand',
+    message: `Type how the user should run the app from the terminal:`,
+    when: ({ confirmRunNormally }) => {
+      if (!confirmRunNormally) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+    validate: descriptionInput => {
+      if (descriptionInput) {
+        return true;
+      } else {
+        console.log('Please enter something for how the user should run the app.');
+        return false;
+      }
+  }
   },
   //projectUsage
   {
     type: 'input',
     name: 'projectUsage',
-    message: 'Provide usage instructions for your project (required).  In the next prompt, you will be asked whether you wish to include a GIF into your README.md file\'s Usage section:',
+    message: '(required) Provide usage instructions for your project. In the next prompt, you will be asked whether you wish to include a GIF into your README.md file\'s Usage section:',
     validate: usageInfo => {
         if (usageInfo) {
           return true;
@@ -120,7 +134,7 @@ const questions = [
   {
     type: 'input',
     name: 'gifPath',
-    message: `Provide the relative path, as viewed from the location of index.js. For example, if index.js in in root, and your app-gif-file is located in root as well, enter the following: app-gif-file.gif
+    message: `Provide the relative path, as viewed from the location of index.js. For example, if index.js is in root, and your app-gif-file is also located in root, enter the following: app-gif-file.gif
 Note: Do not use spaces in your file name.`,
     when: ({ confirmIncludeGif }) => {
       if (confirmIncludeGif) {
@@ -142,7 +156,7 @@ Note: Do not use spaces in your file name.`,
   {
     type: 'input',
     name: 'projectContribute',
-    message: 'Provide guidelines for how others may contribute to this project (required):',
+    message: '(required) Provide guidelines for how others may contribute to this project:',
     validate: contributeGuidelines => {
         if (contributeGuidelines) {
           return true;
@@ -156,7 +170,7 @@ Note: Do not use spaces in your file name.`,
   {
     type: 'input',
     name: 'projectTests',
-    message: 'Provide test descriptions for this project (required):',
+    message: '(required) Provide test descriptions for this app:',
     validate: contributeGuidelines => {
         if (contributeGuidelines) {
           return true;
@@ -192,7 +206,7 @@ init()
     return generateMarkdown(userAnswers);
 })
 .then(markdownContent => {
-  writeToFile(`B:/OneDrive - Edison Energy Inc/Courses/UM Bootcamp/0. Challenges/wk10-team-profile-generator/README2.md`, markdownContent);
+  writeToFile(`B:/OneDrive - Edison Energy Inc/Courses/UM Bootcamp/0. Challenges/wk13-e-commerce-back-end/README3.md`, markdownContent);
 })
 .catch(err => {
     console.log('The error is: ', err);
