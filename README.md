@@ -1,5 +1,5 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  # wk9-readme-generator
+  # readme-generator
   
   The walkthrough video for this application can be found [here](https://drive.google.com/file/d/1IUkYdbWSf-GmWEKZKUofXn06yDMfTZ0w/view).
   ## Project Description
