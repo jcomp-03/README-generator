@@ -206,7 +206,7 @@ init()
     return generateMarkdown(userAnswers);
 })
 .then(markdownContent => {
-  writeToFile(`B:/OneDrive - Edison Energy Inc/Courses/UM Bootcamp/0. Challenges/wk13-e-commerce-back-end/README3.md`, markdownContent);
+  writeToFile(`B:/OneDrive - Edison Energy Inc/Courses/UM Bootcamp/0. Challenges/wk13-e-commerce-back-end/README2.md`, markdownContent);
 })
 .catch(err => {
     console.log('The error is: ', err);

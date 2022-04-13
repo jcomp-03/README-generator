@@ -69,8 +69,8 @@ function renderLicenseSection(license) {
 
 function insertGif (relativePath) {
   if (relativePath) {
-    return `![Brief GIF showing how to run application.](./${relativePath})`;
-  } else return 'No video found';
+    return `![Brief GIF/video showing how to use application.](./${relativePath})`;
+  } else return 'No GIF/video was supplied';
 
 }
 
