@@ -1,9 +1,16 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-  # wk9-readme-generator
+  # readme-generator
   
   The walkthrough video for this application can be found [here](https://drive.google.com/file/d/1IUkYdbWSf-GmWEKZKUofXn06yDMfTZ0w/view).
   ## Project Description
   This Node.js app facilitates the creation and population of a GitHub repository's README.md file. It uses the third-party Node.js module called Inquirer which takes in user information and from that information builds out the README.md file. The app uses Inquirer's .prompt() method to stage a series of questions the user has to answer. Once the user answers all the prompts, the data object (called userAnswers in the JavaScript code) that is returned is then passed to a function whose responsibility is to build out the README file content. This function is aptly called generateMarkdown and is imported into the main file index.js. Finally, fs.writeFile is used to write the file (i.e. README.md) to the user's system, using the return from generateMarkdown as its object.
+  
+  - Modularize your code into multiple files
+  - Write your code using ES6+ concepts, such as let, const, and arrow functions
+  - Use npm (Node Package Manager) to initialize a project and install and import Node.js modules
+  - Build an interactive command-line application that processes user input using a third-party Node.js module
+  - Use string literals to dynamically generate markdown from the command line
+  
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -15,7 +22,7 @@
   Once the repository is cloned, from the root directory of where they installed the application the user is to run the command 'npm install' to install required dependencies. After dependencies are loaded, all the user must do to run the application is type 'node index.js' in the command line and answer the prompts as they appear.
   ## Usage
   See the GIF below for how to use the app.<br>
-  ![Brief GIF showing how to run application.](./app-gif.gif)
+  ![Brief GIF showing how to run application.](./assets/images/app-gif.gif)
   ## License
   <p align="center">Copyright 2022</p>
     <p align="center">=======================================</p><br>
