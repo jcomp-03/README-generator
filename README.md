@@ -22,7 +22,7 @@
   Once the repository is cloned, from the root directory of where they installed the application the user is to run the command 'npm install' to install required dependencies. After dependencies are loaded, all the user must do to run the application is type 'node index.js' in the command line and answer the prompts as they appear.
   ## Usage
   See the GIF below for how to use the app.<br>
-  ![Brief GIF showing how to run application.](./app-gif.gif)
+  ![Brief GIF showing how to run application.](./assets/images/app-gif.gif)
   ## License
   <p align="center">Copyright 2022</p>
     <p align="center">=======================================</p><br>
